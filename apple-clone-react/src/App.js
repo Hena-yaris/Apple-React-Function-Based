@@ -23,28 +23,27 @@ import TV from "./Components/Pages/TV/TV";
 import Watch from "./Components/Pages/Watch/Watch";
 import Four04 from "./Components/Pages/Four04/Four04";
 import Productpage from "./Components/Pages/Productpage/Productpage";
+import SharedLayout from './Components/Pages/SharedLayout';
 
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/iphone" element={<Iphone/>} />
-        <Route path="/ipad" element={<Ipad/>} />
-        <Route path="/mac" element={<Mac/>} />
-        <Route path="/music" element={<Music/>} />
-        <Route path="/productpage" element={<Productpage/>} />
-        <Route path="/support" element={<Support/>} />
-        <Route path="/tv" element={<TV/>} />
-        <Route path="/watch" element={<Watch/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path='*' element={<Four04/>}/>
+        <Route path="/" element={<SharedLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/iphone" element={<Iphone />} />
+          <Route path="/ipad" element={<Ipad />} />
+          <Route path="/mac" element={<Mac />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/productpage" element={<Productpage />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/tv" element={<TV />} />
+          <Route path="/watch" element={<Watch />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<Four04 />} />
+        </Route>
       </Routes>
-
-      <Footer />
     </div>
   );
 }
