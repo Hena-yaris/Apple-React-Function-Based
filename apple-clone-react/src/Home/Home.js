@@ -8,6 +8,7 @@ import Third from "../Components/Third/Third"
 import Fourth from "../Components/Fourth/Fourth"
 import Fifth from "../Components/Fifth/Fifth"
 import Sixth from "../Components/Sixth/Sixth"
+import Youtube from '../Components/Youtube/Youtube'
 
  function Home() {
   return (
@@ -19,6 +20,7 @@ import Sixth from "../Components/Sixth/Sixth"
       <Fourth/>
       <Fifth/>
       <Sixth/>
+      <Youtube/>
     </>
   )
 }
